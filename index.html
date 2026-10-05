@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>What Remains | Kairos Disputatio</title>
+
+  <style>
+    /* -----------------------------
+       BASIC PAGE SETTINGS
+    ------------------------------ */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #ffffff;
+      color: #111111;
+    }
+
+
+    /* -----------------------------
+       GRID
+    ------------------------------ */
+
+    .webtext-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      min-height: 100vh;
+    }
+
+    .panel {
+      min-height: 340px;
+      padding: 50px;
+      border: 2px solid #ffffff;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+
+    /* -----------------------------
+       TYPOGRAPHY
+    ------------------------------ */
+
+    .number {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      opacity: 0.55;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 0.95;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.3;
+    }
+
+
+    /* -----------------------------
+       INDIVIDUAL PANELS
+    ------------------------------ */
+
+    .intro {
+      background: #f7f5f1;
+      justify-content: center;
+    }
+
+    .before {
+      background: #dce9f2;
+    }
+
+    .disruption {
+      background: #f3dddd;
+    }
+
+    .perspectives {
+      background: #e4eee5;
+    }
+
+    .fragments {
+      background: #f2e8d7;
+    }
+
+    .reimagine {
+      background: #e7e3f1;
+    }
+
+    .constellations {
+      background: #dce6ef;
+    }
+
+    .provocation {
+      background: #f5dfd4;
+    }
+
+    .conversation {
+      background: #e2eee7;
+    }
+
+
+    /* -----------------------------
+       INTRO PANEL
+    ------------------------------ */
+
+    .intro-subtitle {
+      max-width: 500px;
+      font-size: 1.7rem;
+    }
+
+
+    /* -----------------------------
+       LINKS
+    ------------------------------ */
+
+    .panel a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .panel a:hover h2 {
+      text-decoration: underline;
+    }
+
+
+    /* -----------------------------
+       RESPONSIVE DESIGN
+    ------------------------------ */
+
+    @media (max-width: 900px) {
+
+      .webtext-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .webtext-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        min-height: 300px;
+        padding: 35px;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      h2 {
+        font-size: 2.3rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<main class="webtext-grid">
+
+  <!-- INTRODUCTION -->
+
+  <section class="panel intro">
+
+    <h1>What<br>Remains</h1>
+
+    <p class="intro-subtitle">
+      Rethinking Disciplinary Community after CCCC
+    </p>
+
+  </section>
+
+
+  <!-- 01 BEFORE -->
+
+  <section class="panel before">
+
+    <p class="number">01.</p>
+
+    <a href="#before">
+      <h2>Before</h2>
+    </a>
+
+    <p>What CCCC Provided</p>
+
+  </section>
+
+
+  <!-- 02 DISRUPTION -->
+
+  <section class="panel disruption">
+
+    <p class="number">02.</p>
+
+    <a href="#disruption">
+      <h2>Disruption</h2>
+    </a>
+
+    <p>What Was Lost</p>
+
+  </section>
+
+
+  <!-- 03 TWO PERSPECTIVES -->
+
+  <section class="panel perspectives">
+
+    <p class="number">03.</p>
+
+    <a href="#perspectives">
+      <h2>Two Perspectives</h2>
+    </a>
+
+    <p>Different Positions, Shared Concerns</p>
+
+  </section>
+
+
+  <!-- 04 FRAGMENTS -->
+
+  <section class="panel fragments">
+
+    <p class="number">04.</p>
+
+    <a href="#fragments">
+      <h2>Fragments</h2>
+    </a>
+
+    <p>Exploring the Uneven Impact</p>
+
+  </section>
+
+
+  <!-- 05 REIMAGINE -->
+
+  <section class="panel reimagine">
+
+    <p class="number">05.</p>
+
+    <a href="#reimagine">
+      <h2>Reimagine</h2>
+    </a>
+
+    <p>Building New Possibilities</p>
+
+  </section>
+
+
+  <!-- 06 CONSTELLATIONS -->
+
+  <section class="panel constellations">
+
+    <p class="number">06.</p>
+
+    <a href="#constellations">
+      <h2>A Field of<br>Constellations</h2>
+    </a>
+
+    <p>From a Single Center to Many Connections</p>
+
+  </section>
+
+
+  <!-- 07 PROVOCATION -->
+
+  <section class="panel provocation">
+
+    <p class="number">07.</p>
+
+    <a href="#provocation">
+      <h2>Our Provocation</h2>
+    </a>
+
+    <p>A Collective Statement</p>
+
+  </section>
+
+
+  <!-- 08 CONVERSATION -->
+
+  <section class="panel conversation">
+
+    <p class="number">08.</p>
+
+    <a href="#conversation">
+      <h2>Join the<br>Conversation</h2>
+    </a>
+
+    <p>What Do You Want to See Next?</p>
+
+  </section>
+
+</main>
+
+</body>
+</html>
