@@ -144,7 +144,21 @@
         font-size: 2.3rem;
       }
 
-    }
+  /* Make the entire linked box clickable. */
+      a.panel {
+        color: inherit;
+        text-decoration: none;
+}
+
+      a.panel:hover h2 {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+}
+
+      a.panel:focus-visible {
+        outline: 3px solid #111111;
+        outline-offset: -8px;
+}
 
   </style>
 </head>
