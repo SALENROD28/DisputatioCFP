@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>What Remains | Kairos Disputatio</title>
 
@@ -14,60 +14,37 @@
     }
 
     body {
-      font-family: Georgia, "Times New Roman", serif;
       background: #ffffff;
       color: #111111;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .webtext-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-rows: repeat(3, minmax(340px, 1fr));
+      gap: 3px;
       min-height: 100vh;
+      background: #ffffff;
     }
 
     .panel {
       min-width: 0;
-      min-height: 340px;
       padding: 50px;
-      border: 2px solid #ffffff;
+
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       justify-content: flex-start;
+
+      color: #111111;
+      text-decoration: none;
       overflow-wrap: break-word;
-    }
-
-    .number {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      opacity: 0.55;
-    }
-
-    h1 {
-      font-size: clamp(3rem, 5vw, 5rem);
-      line-height: 0.95;
-      margin-bottom: 18px;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 3vw, 3rem);
-      line-height: 1;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.4rem;
-      line-height: 1.3;
     }
 
     .intro {
       background: #f7f5f1;
       justify-content: center;
-    }
-
-    .intro-subtitle {
-      max-width: 500px;
-      font-size: 1.7rem;
     }
 
     .before {
@@ -102,54 +79,65 @@
       background: #e2eee7;
     }
 
-    /* Entire clickable boxes */
-    a.panel,
-    a.panel:visited {
-      color: #111111;
-      text-decoration: none;
+    .number {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #767672;
     }
 
-    a.panel:hover h2 {
-      text-decoration: underline;
-      text-underline-offset: 6px;
+    h1 {
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 0.95;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.3;
+    }
+
+    .intro-subtitle {
+      max-width: 540px;
+      font-size: 1.7rem;
+    }
+
+    a.panel:link,
+    a.panel:visited,
+    a.panel:hover,
+    a.panel:active {
+      color: #111111;
+      text-decoration: none;
     }
 
     a.panel:focus-visible {
       outline: 3px solid #111111;
-      outline-offset: -8px;
-    }
-
-    /* Heading links for pages not yet created */
-    .panel a,
-    .panel a:visited {
-      color: #111111;
-      text-decoration: none;
-    }
-
-    .panel a:hover h2 {
-      text-decoration: underline;
-      text-underline-offset: 6px;
-    }
-
-    .panel a:focus-visible {
-      outline: 3px solid #111111;
-      outline-offset: 4px;
+      outline-offset: -6px;
     }
 
     @media (max-width: 900px) {
       .webtext-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+        grid-auto-rows: minmax(340px, auto);
+      }
+
+      .panel {
+        padding: 35px;
       }
     }
 
     @media (max-width: 600px) {
       .webtext-grid {
         grid-template-columns: 1fr;
-      }
-
-      .panel {
-        min-height: 300px;
-        padding: 35px;
+        grid-auto-rows: minmax(300px, auto);
       }
 
       h1 {
@@ -167,7 +155,7 @@
 
   <main class="webtext-grid">
 
-    <!-- INTRODUCTION -->
+    <!-- ROW 1: TITLE, BEFORE, DISRUPTION -->
 
     <section class="panel intro">
       <h1>What<br>Remains</h1>
@@ -177,91 +165,55 @@
       </p>
     </section>
 
-    <!-- 01 BEFORE -->
-
-    <a href="before.html" class="panel before">
+    <a class="panel before" href="before.html">
       <p class="number">01.</p>
       <h2>Before</h2>
       <p>What CCCC Provided</p>
     </a>
 
-    <!-- 02 DISRUPTION -->
-
-    <a href="disruption.html" class="panel disruption">
+    <a class="panel disruption" href="disruption.html">
       <p class="number">02.</p>
       <h2>Disruption</h2>
       <p>What Was Lost</p>
     </a>
 
-    <!-- 03 TWO PERSPECTIVES -->
+    <!-- ROW 2: TWO PERSPECTIVES, FRAGMENTS, REIMAGINE -->
 
     <section class="panel perspectives">
       <p class="number">03.</p>
-
-      <a href="#perspectives">
-        <h2>Two Perspectives</h2>
-      </a>
-
+      <h2>Two<br>Perspectives</h2>
       <p>Different Positions, Shared Concerns</p>
     </section>
 
-    <!-- 04 FRAGMENTS -->
-
     <section class="panel fragments">
       <p class="number">04.</p>
-
-      <a href="#fragments">
-        <h2>Fragments</h2>
-      </a>
-
+      <h2>Fragments</h2>
       <p>Exploring the Uneven Impact</p>
     </section>
 
-    <!-- 05 REIMAGINE -->
-
     <section class="panel reimagine">
       <p class="number">05.</p>
-
-      <a href="#reimagine">
-        <h2>Reimagine</h2>
-      </a>
-
+      <h2>Reimagine</h2>
       <p>Building New Possibilities</p>
     </section>
 
-    <!-- 06 CONSTELLATIONS -->
+    <!-- ROW 3: CONSTELLATIONS, PROVOCATION, CONVERSATION -->
 
     <section class="panel constellations">
       <p class="number">06.</p>
-
-      <a href="#constellations">
-        <h2>A Field of<br>Constellations</h2>
-      </a>
-
+      <h2>A Field of<br>Constellations</h2>
       <p>From a Single Center to Many Connections</p>
     </section>
 
-    <!-- 07 PROVOCATION -->
-
     <section class="panel provocation">
       <p class="number">07.</p>
-
-      <a href="#provocation">
-        <h2>Our Provocation</h2>
-      </a>
-
+      <h2>Our Provocation</h2>
       <p>A Collective Statement</p>
     </section>
 
-    <!-- 08 CONVERSATION -->
-
     <section class="panel conversation">
       <p class="number">08.</p>
-
-      <a href="#conversation">
-        <h2>Join the<br>Conversation</h2>
-      </a>
-
+      <h2>Join the<br>Conversation</h2>
       <p>What Do You Want to See Next?</p>
     </section>
 
