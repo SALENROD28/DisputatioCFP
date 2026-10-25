@@ -7,7 +7,6 @@
   <title>What Remains | Kairos Disputatio</title>
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -26,11 +25,12 @@
 
     .webtext-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       min-height: 100vh;
     }
 
     .panel {
+      min-width: 0;
       min-height: 340px;
       padding: 50px;
       border: 2px solid #ffffff;
@@ -38,8 +38,9 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-    }
 
+      overflow-wrap: break-word;
+    }
 
     .number {
       font-size: 2.5rem;
@@ -64,7 +65,6 @@
       font-size: 1.4rem;
       line-height: 1.3;
     }
-
 
     .intro {
       background: #f7f5f1;
@@ -115,18 +115,34 @@
 
     .panel a:hover h2 {
       text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    /* Styling for an entire clickable box */
+    a.panel,
+    a.panel:visited {
+      color: #111111;
+      text-decoration: none;
+    }
+
+    a.panel:hover h2 {
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    a.panel:focus-visible,
+    .panel a:focus-visible {
+      outline: 3px solid #111111;
+      outline-offset: -8px;
     }
 
     @media (max-width: 900px) {
-
       .webtext-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-
     }
 
     @media (max-width: 600px) {
-
       .webtext-grid {
         grid-template-columns: 1fr;
       }
@@ -143,165 +159,117 @@
       h2 {
         font-size: 2.3rem;
       }
-
-  /* Make the entire linked box clickable. */
-      a.panel {
-        color: inherit;
-        text-decoration: none;
-}
-
-      a.panel:hover h2 {
-        text-decoration: underline;
-        text-underline-offset: 6px;
-}
-
-      a.panel:focus-visible {
-        outline: 3px solid #111111;
-        outline-offset: -8px;
-}
-
+    }
   </style>
 </head>
 
-
 <body>
 
-<main class="webtext-grid">
+  <main class="webtext-grid">
 
-  <!-- INTRODUCTION -->
+    <!-- INTRODUCTION -->
 
-  <section class="panel intro">
+    <section class="panel intro">
+      <h1>What<br>Remains</h1>
 
-    <h1>What<br>Remains</h1>
+      <p class="intro-subtitle">
+        Rethinking Disciplinary Community after CCCC
+      </p>
+    </section>
 
-    <p class="intro-subtitle">
-      Rethinking Disciplinary Community after CCCC
-    </p>
+    <!-- 01 BEFORE: opens its own content page -->
 
-  </section>
-
-  <!-- 01 BEFORE -->
-
-<a href="before.html" class="panel before">
-
-  <p class="number">01.</p>
-
-  <h2>Before</h2>
-
-  <p>What CCCC Provided</p>
-
-</a>
-
-    <p>What CCCC Provided</p>
-
-  </section>
-
-
-  <!-- 02 DISRUPTION -->
-
-  <section class="panel disruption">
-
-    <p class="number">02.</p>
-
-    <a href="#disruption">
-      <h2>Disruption</h2>
+    <a href="before.html" class="panel before">
+      <p class="number">01.</p>
+      <h2>Before</h2>
+      <p>What CCCC Provided</p>
     </a>
 
-    <p>What Was Lost</p>
+    <!-- 02 DISRUPTION -->
 
-  </section>
+    <section class="panel disruption">
+      <p class="number">02.</p>
 
+      <a href="#disruption">
+        <h2>Disruption</h2>
+      </a>
 
-  <!-- 03 TWO PERSPECTIVES -->
+      <p>What Was Lost</p>
+    </section>
 
-  <section class="panel perspectives">
+    <!-- 03 TWO PERSPECTIVES -->
 
-    <p class="number">03.</p>
+    <section class="panel perspectives">
+      <p class="number">03.</p>
 
-    <a href="#perspectives">
-      <h2>Two Perspectives</h2>
-    </a>
+      <a href="#perspectives">
+        <h2>Two Perspectives</h2>
+      </a>
 
-    <p>Different Positions, Shared Concerns</p>
+      <p>Different Positions, Shared Concerns</p>
+    </section>
 
-  </section>
+    <!-- 04 FRAGMENTS -->
 
+    <section class="panel fragments">
+      <p class="number">04.</p>
 
-  <!-- 04 FRAGMENTS -->
+      <a href="#fragments">
+        <h2>Fragments</h2>
+      </a>
 
-  <section class="panel fragments">
+      <p>Exploring the Uneven Impact</p>
+    </section>
 
-    <p class="number">04.</p>
+    <!-- 05 REIMAGINE -->
 
-    <a href="#fragments">
-      <h2>Fragments</h2>
-    </a>
+    <section class="panel reimagine">
+      <p class="number">05.</p>
 
-    <p>Exploring the Uneven Impact</p>
+      <a href="#reimagine">
+        <h2>Reimagine</h2>
+      </a>
 
-  </section>
+      <p>Building New Possibilities</p>
+    </section>
 
+    <!-- 06 CONSTELLATIONS -->
 
-  <!-- 05 REIMAGINE -->
+    <section class="panel constellations">
+      <p class="number">06.</p>
 
-  <section class="panel reimagine">
+      <a href="#constellations">
+        <h2>A Field of<br>Constellations</h2>
+      </a>
 
-    <p class="number">05.</p>
+      <p>From a Single Center to Many Connections</p>
+    </section>
 
-    <a href="#reimagine">
-      <h2>Reimagine</h2>
-    </a>
+    <!-- 07 PROVOCATION -->
 
-    <p>Building New Possibilities</p>
+    <section class="panel provocation">
+      <p class="number">07.</p>
 
-  </section>
+      <a href="#provocation">
+        <h2>Our Provocation</h2>
+      </a>
 
+      <p>A Collective Statement</p>
+    </section>
 
-  <!-- 06 CONSTELLATIONS -->
+    <!-- 08 CONVERSATION -->
 
-  <section class="panel constellations">
+    <section class="panel conversation">
+      <p class="number">08.</p>
 
-    <p class="number">06.</p>
+      <a href="#conversation">
+        <h2>Join the<br>Conversation</h2>
+      </a>
 
-    <a href="#constellations">
-      <h2>A Field of<br>Constellations</h2>
-    </a>
+      <p>What Do You Want to See Next?</p>
+    </section>
 
-    <p>From a Single Center to Many Connections</p>
-
-  </section>
-
-
-  <!-- 07 PROVOCATION -->
-
-  <section class="panel provocation">
-
-    <p class="number">07.</p>
-
-    <a href="#provocation">
-      <h2>Our Provocation</h2>
-    </a>
-
-    <p>A Collective Statement</p>
-
-  </section>
-
-
-  <!-- 08 CONVERSATION -->
-
-  <section class="panel conversation">
-
-    <p class="number">08.</p>
-
-    <a href="#conversation">
-      <h2>Join the<br>Conversation</h2>
-    </a>
-
-    <p>What Do You Want to See Next?</p>
-
-  </section>
-
-</main>
+  </main>
 
 </body>
 </html>
