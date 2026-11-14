@@ -22,7 +22,7 @@
     .webtext-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-template-rows: repeat(3, minmax(340px, 1fr));
+      grid-auto-rows: minmax(340px, 1fr);
       gap: 3px;
       min-height: 100vh;
       background: #ffffff;
@@ -31,12 +31,10 @@
     .panel {
       min-width: 0;
       padding: 50px;
-
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-
       color: #111111;
       text-decoration: none;
       overflow-wrap: break-word;
@@ -77,6 +75,18 @@
 
     .conversation {
       background: #e2eee7;
+    }
+
+    .contributing-author-1 {
+      background: #e7e3f1;
+    }
+
+    .contributing-author-2 {
+      background: #dce9f2;
+    }
+
+    .references {
+      background: #f2e8d7;
     }
 
     .number {
@@ -125,7 +135,6 @@
     @media (max-width: 900px) {
       .webtext-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: none;
         grid-auto-rows: minmax(340px, auto);
       }
 
@@ -152,14 +161,11 @@
 </head>
 
 <body>
-
   <main class="webtext-grid">
 
-    <!-- ROW 1: TITLE, BEFORE, DISRUPTION -->
-
+    <!-- Row 1 -->
     <section class="panel intro">
       <h1>What<br>Remains</h1>
-
       <p class="intro-subtitle">
         Rethinking Disciplinary Community after CCCC
       </p>
@@ -177,34 +183,32 @@
       <p>What Was Lost</p>
     </a>
 
-    <!-- ROW 2: TWO PERSPECTIVES, FRAGMENTS, REIMAGINE -->
+    <!-- Row 2 -->
+    <a class="panel perspectives" href="perspectives.html">
+      <p class="number">03.</p>
+      <h2>Two<br>Perspectives</h2>
+      <p>Different Positions, Shared Concerns</p>
+    </a>
 
-      <a class="panel perspectives" href="perspectives.html">
-        <p class="number">03.</p>
-        <h2>Two<br>Perspectives</h2>
-        <p>Different Positions, Shared Concerns</p>
-      </a>
+    <a class="panel fragments" href="fragments.html">
+      <p class="number">04.</p>
+      <h2>Fragments</h2>
+      <p>Exploring the Uneven Impact</p>
+    </a>
 
-      <a class="panel fragments" href="fragments.html">
-        <p class="number">04.</p>
-        <h2>Fragments</h2>
-        <p>Exploring the Uneven Impact</p>
-      </a>
+    <a class="panel reimagine" href="reimagine.html">
+      <p class="number">05.</p>
+      <h2>Reimagine</h2>
+      <p>Building New Possibilities</p>
+    </a>
 
-      <a class="panel reimagine" href="reimagine.html">
-        <p class="number">05.</p>
-        <h2>Reimagine</h2>
-        <p>Building New Possibilities</p>
-      </a>
-
-    <!-- ROW 3: CONSTELLATIONS, PROVOCATION, CONVERSATION -->
-
+    <!-- Row 3 -->
     <a class="panel constellations" href="constellations.html">
       <p class="number">06.</p>
       <h2>A Field of<br>Constellations</h2>
       <p>From a Single Center to Many Connections</p>
     </a>
-    
+
     <a class="panel provocation" href="provocation.html">
       <p class="number">07.</p>
       <h2>Our Provocation</h2>
@@ -217,7 +221,22 @@
       <p>What Do You Want to See Next?</p>
     </a>
 
-  </main>
+    <!-- Row 4 -->
+    <a class="panel contributing-author-1" href="contributing-author-1.html">
+      <p class="number">09.</p>
+      <h2>Contributing<br>Author #1</h2>
+    </a>
 
+    <a class="panel contributing-author-2" href="contributing-author-2.html">
+      <p class="number">10.</p>
+      <h2>Contributing<br>Author #2</h2>
+    </a>
+
+    <a class="panel references" href="references.html">
+      <p class="number">11.</p>
+      <h2>References</h2>
+    </a>
+
+  </main>
 </body>
 </html>
