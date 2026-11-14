@@ -115,6 +115,28 @@
       justify-self: end;
       text-align: right;
     }
+    .author-photos {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(8px, 2vw, 24px);
+      max-width: 828px;
+      margin: 24px auto 0;
+}
+
+    .author-photos img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 5 / 7;
+      objectt-fit: cover;
+      border-radius: 12px;
+}
+
+@media (max-width: 480px) {
+  .author-photos {
+    grid-template-columns: minmax(0, 260px);
+    justify-content: center;
+  }
+}
   </style>
 </head>
 
@@ -126,10 +148,12 @@
         <h1>Author</h1>
         <p class="author-name">David P. Ornelas</p>
 
-        <img class="author-photo"
-             src="david-ornelas.jpg"
-             alt="Portrait of David P. Ornelas">
-      </header>
+    <div class="author-photos">
+      <img src="david-left.jpg" alt="Describe the left photo">
+      <img src="david-ornelas.jpg" alt="Portrait of David P. Ornelas">
+      <img src="david-right.jpg" alt="Describe the right photo">
+  </div>
+    </header>
 
       <section class="overview" aria-labelledby="overview-heading">
         <h2 id="overview-heading">Overview</h2>
