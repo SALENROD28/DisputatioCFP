@@ -162,6 +162,35 @@
       h2 {
         font-size: 2.3rem;
       }
+        @media (min-width: 901px) and (min-height: 600px) {
+      .webtext-grid {
+        min-height: 100vh;
+        min-height: 100dvh;
+        grid-auto-rows: minmax(0, 1fr);
+      }
+
+      .panel {
+        padding: clamp(12px, 2.4vh, 30px) clamp(16px, 2.5vw, 44px);
+      }
+
+      .number {
+        font-size: clamp(1.1rem, 2.5vh, 1.65rem);
+        margin-bottom: clamp(6px, 1.2vh, 14px);
+      }
+
+      .webtext-grid h1 {
+        font-size: clamp(2rem, 5.6vh, 4rem);
+        margin-bottom: clamp(8px, 1.4vh, 16px);
+      }
+
+      .webtext-grid h2 {
+        font-size: clamp(1.2rem, min(2.5vw, 3.5vh), 2.4rem);
+        margin-bottom: 6px;
+      }
+
+      .webtext-grid p:not(.number) {
+        font-size: clamp(0.9rem, 1.9vh, 1.2rem);
+      }
     }
   </style>
 </head>
