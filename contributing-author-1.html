@@ -6,44 +6,78 @@
   <title>Dr. Gavin P. Johnson</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background: #eac5c1;
+      padding: 0 clamp(12px, 1.4vw, 20px);
+      background: #f7f5f1;
       color: #111111;
       font-family: Georgia, "Times New Roman", serif;
     }
 
-    main {
-      box-sizing: border-box;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: clamp(24px, 5vw, 64px);
+    .author-page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: clamp(40px, 8vw, 110px) clamp(24px, 7.5vw, 105px)
+        clamp(28px, 5vw, 64px);
+      background: #eac5c1;
+      border-radius: 28px;
     }
 
-    h1 {
-      margin: 0 0 2rem;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: 1.1;
+    .page-header {
+      padding-bottom: clamp(24px, 3vw, 44px);
+      border-bottom: 1px solid #111111;
     }
 
-    h2 {
-      margin: 0 0 0.75rem;
-      font-size: 1.5rem;
+    .page-number {
+      margin: 0 0 clamp(16px, 2vw, 28px);
+      color: #48382f;
+      font-size: clamp(1.75rem, 3.2vw, 3rem);
+      line-height: 1.15;
     }
 
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
+    .page-header h1 {
+      margin: 0;
+      font-size: clamp(2.75rem, 10vw, 9rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .page-subtitle {
+      margin: clamp(14px, 2vw, 28px) 0 0;
+      font-size: clamp(1.5rem, 3.6vw, 3.25rem);
+      line-height: 1.2;
+    }
+
+    .overview {
+      padding-top: clamp(32px, 5vw, 72px);
+    }
+
+    .overview h2 {
+      margin: 0 0 clamp(20px, 3vw, 42px);
+      font-size: clamp(1.75rem, 3.2vw, 2.85rem);
+      line-height: 1.15;
+      text-align: center;
+    }
+
+    .overview p {
+      margin: 0 0 1em;
+      font-size: clamp(1.125rem, 2.2vw, 2rem);
+      line-height: 1.65;
     }
 
     .page-nav {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
       align-items: center;
-      margin-top: 3rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid #48382f;
+      gap: 16px;
+      margin-top: auto;
+      padding-top: clamp(32px, 5vw, 64px);
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
     }
 
     .page-nav a {
@@ -62,7 +96,11 @@
       text-align: right;
     }
 
-    @media (max-width: 540px) {
+    @media (max-width: 600px) {
+      .author-page {
+        border-radius: 18px;
+      }
+
       .page-nav {
         grid-template-columns: 1fr;
       }
@@ -76,19 +114,24 @@
     }
   </style>
 </head>
-<body>
-  <main>
-    <h1>Dr. Gavin P. Johnson</h1>
 
-    <section aria-labelledby="overview-heading">
+<body>
+  <main class="author-page">
+    <header class="page-header">
+      <p class="page-number">09.</p>
+      <h1>Author</h1>
+      <p class="page-subtitle">Dr. Gavin P. Johnson</p>
+    </header>
+
+    <section class="overview" aria-labelledby="overview-heading">
       <h2 id="overview-heading">Overview</h2>
-      <p>[Add Dr. Gavin P. Johnson’s biography or overview here.]</p>
+      <p>[Paste Dr. Gavin P. Johnson’s biography here.]</p>
     </section>
 
     <nav class="page-nav" aria-label="Page navigation">
       <a class="back-link" href="index.html">Go Back</a>
       <a class="next-link" href="contributing-author-2.html">
-        Next: David P. Ornelas →
+        Next: David P. Ornelas &rarr;
       </a>
     </nav>
   </main>
