@@ -24,7 +24,7 @@
     }
 
     .author-panel {
-      padding: clamp(28px, 7.2vw, 104px);
+      padding: clamp(22px, 4.5vw, 64px);
       border-radius: clamp(18px, 2.2vw, 32px);
       background: #e2d5ee;
     }
@@ -41,22 +41,38 @@
       line-height: 1.15;
     }
 
-    h1 {
+    .author-header h1 {
       margin: 0;
-      font-size: clamp(2.5rem, 10vw, 9rem);
+      font-size: clamp(2rem, 6vw, 5rem);
       line-height: 0.95;
       text-transform: uppercase;
     }
 
     .author-name {
       margin: clamp(12px, 1.6vw, 23px) 0 0;
-      font-size: clamp(1.35rem, 3.5vw, 3.15rem);
+      font-size: clamp(1.2rem, 2.4vw, 2rem);
       font-weight: normal;
       line-height: 1.2;
     }
 
+    .author-photos {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(8px, 2vw, 24px);
+      max-width: 828px;
+      margin: 24px auto 0;
+    }
+
+    .author-photos img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 5 / 7;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
     .overview {
-      padding-top: clamp(26px, 5.2vw, 75px);
+      padding-top: clamp(22px, 3vw, 44px);
     }
 
     .overview h2 {
@@ -107,28 +123,13 @@
       justify-self: end;
       text-align: right;
     }
-    .author-panel {
-  padding: clamp(22px, 4.5vw, 64px);
-}
 
-.author-header h1 {
-  font-size: clamp(2rem, 6vw, 5rem);
-}
-
-.author-name {
-  font-size: clamp(1.2rem, 2.4vw, 2rem);
-}
-
-.overview {
-  padding-top: clamp(22px, 3vw, 44px);
-}
-    .author-photo {
-  display: block;
-  width: min(100%, 260px);
-  height: auto;
-  margin: 24px auto 0;
-  border-radius: 12px;
-}
+    @media (max-width: 480px) {
+      .author-photos {
+        grid-template-columns: minmax(0, 260px);
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 
@@ -139,20 +140,28 @@
         <p class="section-number">09.</p>
         <h1>Author</h1>
         <p class="author-name">Dr. Gavin P. Johnson</p>
-  <img class="author-photo"
-     src="gavin-johnson.jpg"
-     alt="Portrait of Dr. Gavin P. Johnson">
+
+        <div class="author-photos">
+          <img src="johnson-left.jpg"
+               alt="Describe the left photo">
+
+          <img src="gavin-johnson.jpg"
+               alt="Portrait of Dr. Gavin P. Johnson against a purple background">
+
+          <img src="johnson-right.jpg"
+               alt="Describe the right photo">
+        </div>
       </header>
 
       <section class="overview" aria-labelledby="overview-heading">
         <h2 id="overview-heading">Overview</h2>
-        <p>[Paste Dr. Gavin P. Johnson’s overview here.]</p>
+        <p>bkibibik</p>
       </section>
     </main>
 
     <nav class="author-navigation" aria-label="Page navigation">
       <a class="overview-link" href="index.html">&larr; Back to overview</a>
-      <a class="home-link" href="conversation.html"> ← Go Back</a>
+      <a class="home-link" href="conversation.html">&larr; Go Back</a>
       <a class="next-author-link" href="contributing-author-2.html">Next tab &rarr;</a>
     </nav>
   </div>
