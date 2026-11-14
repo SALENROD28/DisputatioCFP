@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dr. Gavin P. Johnson | What Remains</title>
+  <title>Dr. Gavin P. Johnson</title>
 
   <style>
     body {
@@ -14,15 +14,21 @@
     }
 
     main {
-      max-width: 720px;
+      box-sizing: border-box;
+      max-width: 800px;
       margin: 0 auto;
       padding: clamp(24px, 5vw, 64px);
     }
 
     h1 {
+      margin: 0 0 2rem;
       font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: 1.05;
-      margin: 0 0 1.5rem;
+      line-height: 1.1;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.5rem;
     }
 
     p {
@@ -30,13 +36,43 @@
       line-height: 1.6;
     }
 
-    nav {
-      margin-top: 2.5rem;
-      text-align: center;
+    .page-nav {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      align-items: center;
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #48382f;
     }
 
-    a {
+    .page-nav a {
       color: inherit;
+      text-underline-offset: 0.2em;
+    }
+
+    .back-link {
+      grid-column: 2;
+      justify-self: center;
+    }
+
+    .next-link {
+      grid-column: 3;
+      justify-self: end;
+      text-align: right;
+    }
+
+    @media (max-width: 540px) {
+      .page-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .back-link,
+      .next-link {
+        grid-column: 1;
+        justify-self: center;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -44,10 +80,16 @@
   <main>
     <h1>Dr. Gavin P. Johnson</h1>
 
-    <p>Biography</p>
+    <section aria-labelledby="overview-heading">
+      <h2 id="overview-heading">Overview</h2>
+      <p>[Add Dr. Gavin P. Johnson’s biography or overview here.]</p>
+    </section>
 
-    <nav aria-label="Page navigation">
-      <a href="index.html">Go Back</a>
+    <nav class="page-nav" aria-label="Page navigation">
+      <a class="back-link" href="index.html">Go Back</a>
+      <a class="next-link" href="contributing-author-2.html">
+        Next: David P. Ornelas →
+      </a>
     </nav>
   </main>
 </body>
